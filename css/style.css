@@ -1,0 +1,87 @@
+/* обнуление стилей */
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+/* ----------------------------------------------- */
+
+* {
+	color: black;
+}
+
+.header {
+	color: grey;
+}
+.menu__color {
+	color: blue;
+}
+/* обращение ко всем тегам <p></p> на странице */
+p {
+	color: teal;
+}
+
+/* обращение ко всем классам заголовкjd : title и title3 */
+.page__title,
+.page__title3 {
+	color: tomato;
+}
+
+/* обращение к классу акцент только включенному в класс текст */
+.page__text .page__accent {
+	color: deepskyblue;
+}
+
+/* обращение к тегу <р> расположенному в классе пейдж */
+.page p {
+	color: goldenrod;
+}
+
+/* обращение ко всем спан вложенным в тег <p> */
+p span {
+	color: green;
+}
+
+p a {
+	color: indigo;
+}
+
+ul li,
+.page__list .page__item {
+	color: lightgreen;
+}
+
+.page__row .page__item {
+	color: red;
+}

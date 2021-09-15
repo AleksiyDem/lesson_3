@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+	<!-- хранятся глобальные настройки страницы. не отборажается браузером -->
+	<meta charset="UTF-8"> <!-- настраивает кодировку страницы  -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- повысить кросбраузнорсть и прировнять интернет эксплорер к новому браузеру едж -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>CSS start</title>
+</head>
+
+
+
+<Body>
+
+	<header>
+		<h1 class="header">Основы CSS</h1>
+
+		<nav class="menu">
+			<ul class="menu__block">
+				<li class="menu__link"><a class="menu__color"
+						href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics">Назад</a>
+				</li>
+				<li class="menu__link"><a class="menu__color"
+						href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web">Обзор: Getting
+						started with the web</a></li>
+				<li class="menu__link"><a class="menu__color"
+						href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Далее</a>
+				</li>
+			</ul>
+		</nav>
+
+	</header>
+
+	<main class="page">
+		<p class="page__text">CSS (Cascading Style Sheets) — это код, который вы используете для стилизации вашей
+			веб-страницы.
+			Основы CSS помогут вам понять, что вам нужно для начала работы. Мы ответим на такие вопросы как: Как сделать
+			мой текст черным или красным? Как сделать так, чтобы контент появлялся в определённом месте на экране? Как
+			украсить мою веб-страницу с помощью фоновых изображений и цветов?</p>
+
+		<h2 class="page__title">Так что же такое CSS?</h2>
+
+		<p class="page__text">Как и HTML, CSS на самом деле не является языком программирования. Это не язык разметки -
+			это язык
+			таблицы стилей. Это означает, что он позволяет применять стили выборочно к элементам в документах HTML.
+			Например, чтобы выбрать <span class="page__accent">все</span> элементы абзаца на HTML странице и изменить текст
+			внутри них с чёрного
+			на красный,
+			вы должны написать этот CSS:</p>
+
+		<div class="page__img"><img src="img/css1.png" class="page__css1" alt="Схема сss синтаксис"></div>
+
+		<p class="page__text">Давайте попробуем: вставьте эти три строки CSS в новый файл в ваш текстовый редактор, а
+			затем сохраните файл как <span class="page__item">style.css </span>в вашей папке <span
+				class="page__item">styles </span>
+		</p>
+		<p class="page__text">Но нам всё равно нужно применить CSS к нашему HTML документу. В противном случае, CSS стиль
+			не повлияет на то, как ваш браузер отобразит HTML документ. (Если вы не следили за нашим проектом, то
+			прочитайте раздел <a
+				href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+				class="page__link">Работа с файлами </a>и <a
+				href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics"
+				class="page__link">Основы HTML </a>, чтобы узнать, что вам нужно сделать в первую очередь.)</p>
+
+		<p class="page__text">1. Откройте ваш файл <span class="page__item">index.html </span>и вставьте следующую строку
+			куда-нибудь в шапку, между тегом <span class="page__item"> head
+			</span> и закрывающим тегом <span class="page__item"> head</span>:</p>
+
+		<div class="page__img"><img src="img/css2.png" alt="Схема css пример" class="page__css2"></div>
+
+		<p class="page__text">2. Сохраните <span class="page__item">index.html </span>и загрузите его в вашем браузере. И
+			посмотрите что получится. Если текст вашего обзаца красный, примите поздравления! Вы написали первый код CSS!
+		</p>
+
+		<h2 class="page__title">Анатомия набора правил CSS </h2>
+
+		<p class="page__text">Давайте взглянем на вышеупомянутый CSS немного более подробно: </p>
+
+		<div class="page__img"><img src="img/css3.png" alt="Схема css Анатомия" class="page__css3"></div>
+
+		<p class="page__text">Вся структура называется <span class="page__accent">набором правил </span>(но зачастую для
+			краткости "правило"). Отметим также имена отдельных частей:</p>
+
+		<h3 class="page__title3">Селектор (Selector)</h3>
+		<p class="page__text">Имя HTML-элемента в начале набора правил. Он выбирает элемент(ы) для применения стиля (в
+			данном случае, элементы <span class="page__item">p</span> ). Для стилизации другого элемента, просто измените
+			селектор.</p>
+		<h3 class="page__title3">Свойства (Properties)</h3>
+		<p class="page__text">Способы, которыми вы можете стилизовать определённый HTML-элемент (в данном случае, <span
+				class="page__item">color</span> является свойством для элементов <span class="page__item">p</span>). В CSS
+			вы выбираете, какие свойства вы
+			хотите затронуть в вашем правиле.
+		</p>
+		<h3 class="page__title3">Значение свойства (Property value)</h3>
+		<p class="page__text">Справа от свойства, после двоеточия, у нас есть <span class="page__accent">значение
+				свойства</span>, которое выбирает одно из
+			множества возможных признаков для данного свойства (существует множество значений <span
+				class="page__item">color</span>, помимо <span class="page__item">red</span>).</p>
+
+		<p class="page__text">Обратите внимание на важные части синтаксиса:</p>
+
+		<ul class="page__list">
+			<li class="page__row">Каждый набор правил (кроме селектора) должен быть обёрнут в фигурные скобки<span
+					class="page__item"> {} </span>.</li>
+			<li class="page__row">В каждом объявлении необходимо использовать двоеточие <span class="page__item"> :
+				</span>,
+				чтобы отделить свойство от его значений.</li>
+			<li class="page__row">В каждом наборе правил вы должны использовать точку с запятой<span class="page__item"> ;
+				</span>, чтобы отделить каждое объявление от следующего.</li>
+		</ul>
+
+		<p class="page__text">Таким образом, чтобы изменить несколько значений свойств сразу, вам просто нужно написать
+			их, разделяя точкой с запятой</p>
+
+		<div class="page__img"><img src="img/css4.png" alt="Схема css разделитель точка с запятой" class="page__css4">
+		</div>
+
+		<h2 class="page__title">Выбор нескольких элементов</h2>
+
+		<p class="page__text">Вы также можете выбрать несколько элементов разного типа и применить единый набор правил для
+			всех из них. Добавьте несколько селекторов, разделённых запятыми. Например:</p>
+
+		<div class="page__img"></div> <img src="img/css5.png" alt="Cхема css несколько селекторов через запятую"
+			class="page__css5">
+
+		<h2 class="page__title">Разные типы селекторов</h2>
+
+		<p class="page__text">Существует множество различных типов селектора. Выше мы рассматривали только<span
+				class="page__accent"> селектор элементов </span>, который выбирает все элементы определённого типа в HTML
+			документе. Но мы можем сделать выбор более конкретным. Вот некоторые из наиболее распространённых типов
+			селекторов:</p>
+
+		<div class="page__img"><img src="img/css6.png" alt="Схема css таблица с типами селекторов" class="page__css6">
+		</div>
+
+		<p class="page__text">Существует ещё много селекторов для изучения, и вы можете найти более подробный список в
+			нашем<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors" class="page__link">
+				Руководстве селекторов (en-US)</a>.</p>
+
+		<h2 class="page__title">Заключение</h2>
+		<p class="page__text">Здесь мы узнали только самую поверхность CSS. Чтобы узнать больше, перейдите на нашу<a
+				href="https://developer.mozilla.org/ru/docs/Learn/CSS" class="page__link"> страницу изучения CSS.</a>.</p>
+
+	</main>
+
+	<footer class="page__footer">
+		<nav class="menu">
+			<ul class="menu__block">
+				<li class="menu__link"><a class="menu__color"
+						href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics">Назад</a>
+				</li>
+				<li class="menu__link"><a class="menu__color"
+						href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web">Обзор: Getting started
+						with the web</a></li>
+				<li class="menu__link"><a class="menu__color"
+						href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics">Далее</a>
+				</li>
+			</ul>
+		</nav>
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+					alt="Правильный CSS!" />
+			</a>
+		</p>
+	</footer>
+</Body>
+
+</html>
